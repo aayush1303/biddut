@@ -236,7 +236,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     };
 
     try {
-      const response = await fetch('http://localhost:500/send_email', {
+      const response = await fetch('https://biddut-backend.vercel.app/send_email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
