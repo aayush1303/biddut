@@ -21,7 +21,7 @@ app.use(express.json()); // Parses JSON data from the request body
 
 
 app.get('/', (req, res) => {
-    res.status(200).send('Backend is running. Use the /send_email endpoint to send emails.');
+    res.send('API Working');
 });
 
 
