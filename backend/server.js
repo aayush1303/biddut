@@ -20,6 +20,11 @@ app.use(cors({
 app.use(express.json()); // Parses JSON data from the request body
 
 
+app.get('/', (req, res) => {
+    res.status(200).send('Backend is running. Use the /send_email endpoint to send emails.');
+});
+
+
 app.post("/send_email", function (req, res) {
   const { email, name, issue, message, address } = req.body; // Extract data from JSON request body
 
