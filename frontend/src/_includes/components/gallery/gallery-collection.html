@@ -1,0 +1,26 @@
+<section class="relative mt-24 mb-24">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-[7%]">
+        {% for project in projectGallery %}
+        <div class="relative h-[500px] w-full overflow-hidden group hover:scale-100">
+          <!-- Background Image with Zoom Effect -->
+          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-300 ease-in-out transform scale-100 group-hover:scale-110" style="background-image: url('{{ project.image }}');"></div>
+      
+          <!-- Overlay with Fade-in Effect -->
+          <div class="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100">
+            <!-- Content on Overlay -->
+            <div class="flex items-end justify-center h-full text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+              <div class="bg-secondary mb-10 p-6 sm:p-8 md:p-10 flex flex-col items-center justify-between gap-4">
+                <div class="sm:w-16 sm:h-16 w-12 h-12 rounded-full bg-[#fff] text-black text-2xl flex items-center justify-center">
+                  <a href="{{project.link}}"><i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <p class="text-lg">{{ project.title }}</p>
+                  <p class="text-xl font-[500]">{{ project.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      </div>          
+</section>

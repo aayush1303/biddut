@@ -1,0 +1,13 @@
+<section class="relative px-[7%] mt-24 mb-24">
+    <div>
+        <h2 class="text-3xl font-bold text-secondary">{{heading}}</h2>
+        <p class="mt-3 text-md font-[500]">{{subHeading}}</p>
+        <div class="flex items-start justify-between flex-col mt-4 gap-2">
+            <div class="flex items-start justify-between flex-col">
+                <div class="legal-content">
+                    {{content | markdown | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

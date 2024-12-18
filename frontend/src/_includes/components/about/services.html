@@ -1,0 +1,68 @@
+<section class="relative service-carousel px-[7%] bg-[#F5F5F5]">
+    <div class="mx-auto max-w-7xl py-24">
+        <div class="mb-14 flex flex-col justify-center items-center sm:flex-row sm:items-center sm:justify-between max-sm:gap-8">
+            <h2 class="text-4xl text-center font-bold text-gray-900 lg:text-left">{{serviceSliderHeading}}</h2>
+            <!-- Slider controls -->
+            <div class="flex items-center gap-8">
+                <button id="slider-button-left"
+                    class="swiper-button-prev group flex justify-center items-center bg-[#fff] w-12 h-12 transition-all duration-500 rounded-full hover:bg-secondary "
+                    data-carousel-prev>
+                    <svg class="h-6 w-6 text-secondary group-hover:text-white" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+                <button id="slider-button-right"
+                    class="swiper-button-next group flex justify-center items-center bg-secondary w-12 h-12  rounded-full"
+                    data-carousel-next>
+                    <svg class="h-6 w-6 text-[#fff]" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3 12L19 12M14 18L19.2929 12.7071C19.6262 12.3738 19.7929 12.2071 19.7929 12C19.7929 11.7929 19.6262 11.6262 19.2929 11.2929L14 6"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+            </div>
+        </div>
+        <!--Slider wrapper-->
+        <div class="lg:flex grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-8 swiper mySwiper">
+            <div class="swiper-wrapper">
+                {% for service in subServices.subServices %}
+                <div class="swiper-slide">
+                    <div class="w-full h-[500px] flex justify-center flex-col overflow-hidden group hover:scale-100">
+                        <!-- Top Half with Background Image and Overlay -->
+                        <div class="relative w-full h-1/2 bg-cover bg-center" style="background-image: url('{{ service.bgImage }}');">
+                            <!-- Overlay on hover of parent div -->
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300 ease-in-out"></div>
+                        </div>
+            
+                        <!-- Icon in the Center -->
+                        <div class="services-slider-icon">
+                            <i class="fa-solid {{ service.icon }} text-3xl"></i>
+                        </div>
+            
+                        <!-- Bottom Half -->
+                        <div class="service-slider-content">
+                            <p class="text-xl mt-2 text-black">{{ service.title }}</p>
+                            <p class="mt-2 text-textTertiary text-[15px] leading-snug mb-auto">{{ service.description }}</p>
+                            <div class="mt-auto"></div>
+                            <a href="{{ service.link }}" class="no-underline cursor-pointer mt-2 mb-2">
+                                <p class="mt-2 flex items-center justify-center gap-2 text-[17px] hover:underline text-black">
+                                    Read More
+                                    <span>
+                                        <i class="fa-solid fa-arrow-up rotate-30 text-md"></i>
+                                    </span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+ </section>

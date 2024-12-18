@@ -1,0 +1,26 @@
+<section class="relative">
+    <div class="bg-bgPrimary px-[7%] flex flex-col text-center z-1">
+        <h2 class="services-heading mt-16">{{serviceHeading}}</h2>
+        <h2 class="services-heading text-black">{{serviceSubHeading}}</h2>
+        <div class="services-container">
+        {% for service in subServices.subServices %}
+            <div class="group services-container-item shadow-md">
+                <div class="service-container-icon">
+                    <i class="fa-solid {{ service.icon }} text-3xl"></i>
+                </div>
+                <p class="text-xl mt-2 text-black">{{ service.title }}</p>
+                <p class="mt-2 text-textTertiary text-[15px]">{{ service.description }}</p>
+                <div class="mt-auto"></div>
+                <a href="{{ service.link }}" class="no-underline cursor-pointer mt-4 mb-2">
+                    <p class="services-link">
+                        {{buttonText}}
+                        <span>
+                            <i class="fa-solid fa-arrow-up rotate-30 text-md"></i>
+                        </span>
+                    </p>
+                </a>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>

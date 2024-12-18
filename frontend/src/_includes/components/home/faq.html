@@ -1,0 +1,37 @@
+<section>
+    <div class="faq">
+        <!-- Left Section with Image -->
+        <div class="w-full lg:w-2/5">
+            <img src="{{faqImage}}" alt="FAQ Background"
+                class="faq-image" />
+        </div>
+
+        <!-- Right Section with FAQ Dropdown -->
+        <div class="w-full lg:w-3/5 space-y-4">
+            <h2 class="faq-heading">{{faqHeading}} <span
+                    class="faq-heading-highlight">{{faqHighlight}}</span></h2>
+                    
+                {% for faq in faqs.faqs %}
+                    <div id="faq-container-{{ loop.index }}"
+                        class="faq-container shadow-md transform transition-transform duration-300 hover:bg-secondary group hover:scale-100">
+                        <button onclick="toggleFaq('{{ loop.index }}')"
+                            class="px-6 flex items-center justify-start gap-5 w-full py-4 text-left focus:outline-none hover:text-textPrimary">
+                            <span id="span-{{ loop.index }}"
+                                class="faq-icon faq-icon">
+                                <span id="icon-{{ loop.index }}">
+                                    <i class="fa-solid fa-plus"></i>
+                                </span>
+                            </span>
+                            <span class="text-[17px] font-[500] group-hover:text-white">{{ faq.question }}</span>
+                        </button>
+                        <div id="faq-{{ loop.index }}"
+                            class="px-6 faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out bg-white">
+                            <p class="p-2 text-textTertiary">
+                                {{ faq.answer }}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+        </div>
+    </div>
+</section>

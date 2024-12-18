@@ -1,0 +1,232 @@
+<div id="topBar"
+class="header-banner">
+<div class="flex items-center justify-between gap-5">
+    <div
+        class="header-banner-content">
+        <span class="text-secondary"><i class="fa-solid fa-location-dot"></i></span>{{businessInfo.businessLocation}}
+    </div>
+    <div
+        class="header-banner-content hidden sm:flex">
+        <span class="text-secondary"><i
+                class="fa-solid fa-envelope"></i></span>{{businessInfo.businessEmail}}
+    </div>
+</div>
+<div class="items-center hidden sm:flex text-white justify-between gap-4">
+    <ul class="list-none flex gap-4 items-center">
+      {% for icon in socialIcons %}
+        <li>
+          <a href="{{ icon.link }}" target="_blank" rel="noopener noreferrer">
+            <i class="{{ icon.icon }} header-banner-icon"></i>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+<header id="mainHeader" class="fixed top-10 left-0 w-full z-[100] transition-transform duration-300 ease-in-out">
+    <div class="site-header md:h-23">
+        <div>
+            <img src="{{businessInfo.businessLogo}}" alt="">
+        </div>
+        <div class="flex items-center justify-between">
+            <ul class="lg:flex text-xl items-center justify-between gap-10 hidden">
+                <li class="text-white text-[18px] cursor-pointer underline-animation">
+                    <a href="/" class="site-header-link">
+                        <span id="underline">Home</span>
+                    </a>
+                </li>
+                <li class="text-white text-[18px] cursor-pointer">
+                    <a href="/about" class="site-header-link">
+                        <span id="underline">About</span>
+                    </a>
+                </li>
+                <li class="site-header-dropdown group">
+                    <a href="/services" class="site-header-link relative">
+                        <span id="underline">Services</span>
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <ul class="dropdown-menu">
+                        {% for service in services.services %}
+                        <li>
+                            <a href="{{ service.serviceLink }}" class="dropdown-menu-item">
+                                {{ service.serviceText }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="site-header-dropdown group">
+                    <a href="/service-areas" class="site-header-link">
+                        <span id="underline">Service Areas</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        {% for serviceArea in serviceAreas.serviceAreas %}
+                        <li>
+                            <a href="{{ serviceArea.serviceAreaLink }}" class="dropdown-menu-item">
+                                {{ serviceArea.serviceAreaText }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="text-white text-[18px] cursor-pointer">
+                    <a href="/gallery" class="site-header-link">
+                        <span id="underline">Gallery</span>
+                    </a>
+                </li>
+                <li class="text-white text-[18px] cursor-pointer">
+                    <a href="/blogs" class="site-header-link">
+                        <span id="underline">Blogs</span>
+                    </a>
+                </li>
+                <li class="text-white text-[18px] cursor-pointer">
+                    <a href="/contact" class="site-header-link">
+                        <span id="underline">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex items-center gap-8">
+            <div id="search" class="site-header-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="menuIcon" class="site-header-menu md:text-2xl">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="searchContainer" class="search-overlay">
+    <div class="search-content">
+        <div class="w-full flex flex-col gap-20">
+            <div class="flex justify-between items-center w-full">
+                <div>
+                    <img src="{{businessInfo.businessLogo}}" alt="">
+                </div>
+                <div id="closeSearch" class="text-2xl cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="relative">
+                <input type="text" placeholder="Type here to search" class="search-overlay-input" />
+                <div class="cursor-pointer">
+                    <i class="fa-solid fa-magnifying-glass search-overlay-input-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="menuContainer"
+class="lg:hidden w-[350px] sm:w-[400px] md:w-[450px] bg-black overflow-y-auto right-0 left-auto h-screen fixed z-[100] p-10 transform translate-x-full transition-transform duration-300 ease-in-out">
+<div class=" flex items-center justify-between ">
+    <div><img src="{{businessInfo.businessLogo}}" alt=""></div>
+    <div id="closeIcon"
+        class="menu-container-close-icon">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+</div>
+<p class="text-textSecondary mt-10">{{businessInfo.businessDescription}}
+</p>
+<div class="mt-10">
+    <ul class="list-none flex flex-col gap-3">
+        <li>
+            <a href="/"
+                class="menu-container-link">Home</a>
+        </li>
+        <li>
+            <a href="/about"
+                class="menu-container-link">About</a>
+        </li>
+        <div class="group hover:scale-100">
+            <div class="flex items-center justify-between">
+                <a href="/services" class="menu-container-link group-hover:text-secondary">
+                    <li>Services</li>
+                </a>
+                <div id="arrowToggle"
+                    class="menu-container-dropdown-menu">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+            <div id="options" class="hidden text-white text-md ">
+                {% for service in services.services %}
+                <li>
+                  <a href="{{ service.serviceLink }}"
+                     class="menu-dropdown-text">
+                    {{ service.serviceText }}
+                  </a>
+                </li>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="group hover:scale-100">
+            <div class="flex items-center justify-between">
+                <a href="/service-areas" class="menu-container-link group-hover:text-secondary">
+                    <li>Service Areas</li>
+                </a>
+                <div id="arrowToggles"
+                    class="menu-container-dropdown-menu">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+            <div id="servicesOptions" class="hidden text-white text-md ">
+                {% for serviceArea in serviceAreas.serviceAreas %}
+                <li>
+                  <a href="{{ serviceArea.serviceAreaLink }}"
+                     class="menu-dropdown-text">
+                    {{ serviceArea.serviceAreaText }}
+                  </a>
+                </li>
+                {% endfor %}
+            </div>
+        </div>
+        <li>
+            <a href="/blogs"
+                class="menu-container-link">Blogs</a>
+        </li>
+        <li>
+            <a href="/gallery"
+                class="menu-container-link">Gallery</a>
+        </li>
+        <li>
+            <a href="/contact"
+                class="menu-container-link">Contact</a>
+        </li>
+    </ul>
+</div>
+<p class="text-white text-lg mt-10">Contact</p>
+<div class="mt-5 text-white flex flex-col gap-3">
+
+    <!-- Address with Location Icon -->
+    <div class="flex items-start gap-4 ">
+        <a href="#" class="menu-container-icons">
+            <i class="fa-solid fa-location-dot text-black"></i>
+        </a>
+        <p class="flex-1 hover:text-secondary cursor-pointer">{{businessInfo.businessLocation}}</p>
+    </div>
+
+    <!-- Phone with Phone Icon -->
+    <div class="flex items-center gap-4 ">
+        <div class="menu-container-icons">
+            <i class="fa-solid fa-phone text-black"></i>
+        </div>
+        <p class="hover:text-secondary cursor-pointer">{{businessInfo.businessPhone}}</p>
+    </div>
+
+    <!-- Email with Envelope Icon -->
+    <div class="flex items-center gap-4 ">
+        <div class="menu-container-icons">
+            <i class="fa-solid fa-envelope text-black"></i>
+        </div>
+        <p class="hover:text-secondary cursor-pointer">{{businessInfo.businessEmail}}</p>
+    </div>
+</div>
+<div class="flex items-center gap-[2%] mt-10 text-xl">
+    {% for icon in socialIcons %}
+    <a href="{{ icon.link }}" class="menu-container-social-icon" target="_blank" rel="noopener noreferrer">
+      <i class="{{ icon.icon }} text-white hover:text-secondary"></i>
+    </a>
+    {% endfor %}
+</div>
+</div>

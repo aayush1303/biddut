@@ -1,0 +1,23 @@
+[
+    {
+      "name": "facebook",
+      "icon": "fab fa-facebook-f",
+      "link": "https://facebook.com"
+    },
+    {
+      "name": "instagram",
+      "icon": "fab fa-instagram",
+      "link": "https://instagram.com"
+    },
+    {
+      "name": "twitter",
+      "icon": "fab fa-twitter",
+      "link": "https://twitter.com"
+    },
+    {
+      "name": "email",
+      "icon": "fa-regular fa-envelope",
+      "link": "mailto:example@example.com"
+    }
+  ]
+  

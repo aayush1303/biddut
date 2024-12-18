@@ -1,0 +1,997 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+    overflow-x: hidden;
+}
+
+/* 
+This CSS is for: 
+Folder: /components/shared
+File: nav.html 
+*/
+
+
+.header-banner{
+    @apply h-10 fixed w-full bg-primary flex items-center justify-center sm:justify-between px-[7%] z-[100];
+}
+
+.header-banner-content{
+    @apply text-textSecondary flex gap-2 items-center justify-center text-[15px] hover:text-textPrimary cursor-pointer transition duration-300 ease-in-out;
+}
+
+.header-banner-icon{
+    @apply text-textPrimary  hover:text-secondary cursor-pointer transition duration-300 ease-in-out
+}
+
+
+
+.site-header {
+    @apply flex items-center justify-between px-[7%] h-20 w-full bg-transparent border-b border-borderColor;
+}
+
+.site-header-link {
+    @apply no-underline text-white;
+}
+
+.site-header-dropdown {
+    @apply text-white text-[18px] cursor-pointer relative py-6 hover:scale-100;
+}
+
+.site-header-search {
+    @apply items-center hidden md:flex text-white gap-7 text-xl cursor-pointer;
+}
+
+.site-header-menu {
+    @apply h-12 w-12 bg-secondary flex items-center justify-center text-white text-xl lg:hidden cursor-pointer;
+}
+
+
+
+.dropdown-menu {
+    @apply absolute left-0 mt-[25px] bg-black overflow-hidden max-h-0 transition-max-height duration-200 ease-in-out group-hover:max-h-[700px] flex-col min-w-[200px];
+}
+
+.dropdown-menu-item {
+    @apply block px-4 py-2 text-textPrimary hover:bg-dropDownMenuColor text-[17px];
+}
+
+
+
+
+.menu-container-dropdown-menu{
+    @apply h-5 w-5 border border-white group-hover:border-secondary text-white group-hover:text-secondary flex items-center justify-center text-[12px] cursor-pointer mr-4;
+}
+
+.menu-container-link{
+    @apply text-textPrimary text-base hover:text-secondary cursor-pointer;
+}
+
+.menu-dropdown-text{
+    @apply block px-4 py-2 text-white hover:text-secondary text-[17px];
+}
+
+.menu-container-icons{
+    @apply w-8 h-8 flex items-center justify-center bg-gray-200 rounded-full flex-shrink-0;
+}
+
+.menu-container-social-icon{
+    @apply flex items-center justify-center w-12 h-12 rounded-full bg-black  transition duration-200;
+}
+
+.menu-container-close-icon{
+    @apply h-12 w-12 bg-white flex items-center justify-center text-black text-xl md:text-2xl lg:hidden cursor-pointer;
+}
+
+
+
+.search-overlay {
+    @apply fixed top-[-100%] left-0 w-full h-[45%] bg-[rgba(0,0,0,0.8)] text-textPrimary flex overflow-hidden transition-all duration-300 z-[1000];
+}
+
+.search-overlay-input {
+    @apply w-full py-4 text-2xl pl-3 pr-10 border-b-2 border-searchBarColor placeholder:text-searchBarColor bg-transparent focus:outline-none focus:border-secondary;
+}
+
+.search-overlay-input-icon {
+    @apply absolute right-3 top-1/2 transform -translate-y-1/2 text-textPrimary text-xl;
+}
+
+.search-content {
+    @apply relative w-full px-[7%] flex flex-col mt-16 justify-start;
+}
+
+
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.scrolled-header {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#underline {
+    display: inline-block;
+    position: relative;
+}
+
+#underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+    background-color: #DD0733;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover #underline::after {
+    transform: scaleX(1);
+}
+
+.transition-max-height {
+    transition: max-height 0.8s ease-in-out;
+}
+
+.group-hover\:max-h-\[300px\] {
+    max-height: 300px;
+}
+
+.group:hover>ul {
+    border-top: 4px solid #DD0733;
+}
+
+#menuContainer {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#menuContainer::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media (min-width: 575px) {
+    .show-at-575 {
+        display: flex;
+    }
+}
+
+#searchContainer {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    overflow: hidden;
+    transition: top 0.3s ease-in-out; 
+    z-index: 1000;
+}
+.underline-link {
+    text-decoration: none; 
+}
+
+.underline-link:hover p {
+    text-decoration: underline; 
+}
+
+
+/* END OF NAV CSS */
+
+/*
+This CSS is for: footer
+Folder: /components/shared
+File: footer.html
+*/
+
+
+.footer-container{
+    @apply container mx-auto py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10;
+}
+
+.footer-contact-text{
+    @apply text-textSecondary flex gap-2 items-center justify-center text-[15px] hover:text-textPrimary cursor-pointer transition duration-300 ease-in-out;
+}
+
+.footer-service-icon{
+    @apply text-sm mr-2 hidden group-hover:inline-block transition duration-300 ease-in-out;
+}
+
+.footer-gallery-image{
+    @apply overflow-hidden h-20 w-20;
+}
+
+.footer-social-icon{
+    @apply flex items-center justify-center w-12 h-12  bg-[#1D1E22] hover:bg-secondary transition duration-200;
+}
+
+
+/* END OF FOOTER CSS */
+
+/*
+This CSS is for: hero
+Folder: /components/home
+File: hero.html
+*/
+
+.hero-container{
+    @apply flex flex-col justify-center items-start ml-[7%] top-[38%] w-[50%] relative z-10;
+}
+
+.hero-heading{
+    @apply md:text-6xl text-white text-[2.5rem];
+}
+
+.hero-overlay{
+    @apply absolute inset-0 bg-black opacity-50;
+}
+
+.hero-button {
+    @apply flex items-center justify-center w-52 h-[60px] bg-secondary text-white font-medium mt-5 hover:text-black hover:bg-white transition duration-300 ease-in-out;
+}
+
+.hero-slider-controller{
+    @apply ml-[70%] flex-col justify-center items-center max-sm:gap-8 hidden lg:flex;
+}
+
+#hero .swiper-wrapper {
+    width: 100%;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+
+#hero .swiper-slide {
+    height: 100vh;
+}
+
+
+#hero .swiper-pagination-bullet {
+    background: #fff;
+    width: 20px;
+    height: 20px;
+}
+
+#hero .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 30px;
+    gap: 10px;
+}
+
+
+#hero .swiper-button-next svg,
+#hero .swiper-button-prev svg {
+    width: 24px;
+    height: 24px;
+}
+
+#hero .swiper-button-prev {
+    background-color:#DD0733;
+    color: #fff;
+}
+
+#hero .swiper-button-next {
+    background-color: #fff;
+    color: black;
+}
+
+#hero .swiper-button-prev:after,
+#hero .swiper-rtl #hero .swiper-button-next:after,
+#hero .swiper-button-next:after,
+#hero .swiper-rtl #hero .swiper-button-prev:after {
+    content: '';
+}
+
+#hero .swiper-button-next,
+#hero .swiper-button-prev {
+    position: relative;
+    margin-top: -36px;
+
+}
+
+
+/* END OF HERO CSS */
+
+/*
+This CSS is for: testimonial
+Folder: /components/home
+File: testimonial.html
+*/
+
+
+.testimonial-carousel .swiper-button-prev:after,
+.testimonial-carousel .swiper-rtl .swiper-button-next:after,
+.testimonial-carousel .swiper-button-next:after,
+.testimonial-carousel .swiper-rtl .swiper-button-prev:after {
+    content: '';
+}
+
+.testimonial-carousel .swiper-button-next svg,
+.testimonial-carousel .swiper-button-prev svg {
+    width: 24px;
+    height: 24px;
+}
+
+.testimonial-carousel .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .testimonial-carousel .swiper-slide {
+        min-height: 380px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .testimonial-carousel .swiper-slide {
+        min-height: 340px;
+    }
+}
+
+
+.testimonial-carousel .swiper-slide p {
+    flex-grow: 1;
+}
+
+.testimonial-carousel .swiper-button-next,
+.testimonial-carousel .swiper-button-prev {
+    position: relative;
+    margin-top: 32px;
+}
+
+.testimonial-carousel .swiper-slide.swiper-slide-active {
+    --tw-border-opacity: 1;
+    border-color: #DD0733;
+}
+
+.testimonial-carousel .swiper-slide.swiper-slide-active>.swiper-slide-active\:text-indigo-600,
+.testimonial-carousel .swiper-slide.swiper-slide-active>.flex .grid .swiper-slide-active\:text-indigo-600 {
+    --tw-text-opacity: 1;
+    color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
+.testimonial-heading{
+    @apply text-4xl font-bold text-gray-900 leading-[3.25rem] mb-8;
+}
+
+.testimonial-heading-highlight{
+    @apply text-secondary pl-2;
+}
+
+.testimonials-button{
+    @apply flex justify-center items-center bg-[#fff] transition-all duration-500 rounded-lg hover:bg-secondary hover:border-none hover:scale-100;
+}
+
+/* END OF TESTIMONIAL CSS */
+
+/*
+This CSS is for: about
+Folder: /components/home
+File: about.html
+*/
+
+.abt-container-heading{
+    @apply text-4xl font-semibold text-black text-left;
+}
+
+.abt-container{
+    @apply px-[7%] flex flex-col lg:flex-row z-[1] w-full bg-[#fff] mt-24 lg:gap-10  justify-center mb-36;
+}
+
+.abt-container-left-section{
+    @apply relative w-full lg:w-1/2 sm:mb-16 lg:m-0;
+}
+
+.abt-container-first-image{
+    @apply sm:h-[600px] min-h-[200px] object-contain lg:h-auto sm:w-full lg:w-[370px] xl:ml-[25%] lg:ml-[15%] z-[1];
+}
+
+.abt-container-second-image{
+    @apply absolute top-[230px] w-[280px] xl:w-[290px] lg:w-[300px] hidden lg:block z-[1];
+}
+
+.abt-container-right-section{
+    @apply relative w-full lg:w-1/2 mt-8  lg:mt-0;
+}
+
+.abt-container-content{
+    @apply flex w-full mt-8 justify-between gap-4 flex-wrap;
+}
+
+.abt-container-icon-container{
+    @apply min-w-16 min-h-16 bg-bgSecondary flex items-center justify-center group-hover:bg-secondary transition-colors duration-300 ease-in-out;
+}
+
+.abt-container-button{
+    @apply w-48 h-[50px] bg-secondary text-textPrimary font-[500] mt-10 hover:text-white hover:bg-black transition duration-300 ease-in-out flex items-center justify-center;
+}
+
+/* END OF ABOUT CSS */
+
+/*
+This CSS is for: about
+Folder: /components/home
+File: service.html
+*/
+
+.services-container{
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 mb-24;
+}
+
+.services-heading{
+    @apply text-4xl font-semibold text-black;
+}
+
+.services-container-item{
+    @apply flex flex-col items-start text-left justify-center bg-[#fff] min-h-[300px] p-6 text-white  cursor-pointer hover:scale-100;
+}
+
+.service-container-icon{
+    @apply flex items-center justify-center w-16 h-16 bg-secondary mb-2 transition-colors duration-300 group-hover:bg-black;
+}
+
+.services-link{
+    @apply mt-2 flex items-center justify-center gap-2 text-[17px] hover:underline text-black;
+}
+
+.rotate-30 {
+    transform: rotate(30deg);
+}
+
+/* END OF SERVICE CSS */
+
+/*
+This CSS is for: contact
+Folder: /components/home
+File: contact.html
+*/
+
+.home-contact{
+    @apply relative h-screen text-textPrimary mb-24 bg-cover bg-center ;
+}
+
+.home-contact-overlay{
+    @apply absolute inset-0 bg-black bg-opacity-70;
+}
+
+.home-contact-container{
+    @apply relative flex flex-col items-start justify-start  h-full text-left space-y-4 px-[7%];
+}
+
+.home-contact-heading{
+    @apply text-5xl font-[500] mt-28 w-[60%];
+}
+
+.home-contact-button-container{
+    @apply flex sm:space-x-4 flex-col sm:flex-row;
+}
+
+.home-contact-button1{
+    @apply w-52 h-[60px] bg-secondary text-textPrimary font-[500] mt-5 hover:text-black hover:bg-[#fff] transition duration-300 ease-in-out flex items-center justify-center;
+}
+
+.home-contact-button2{
+    @apply w-52 h-[60px] bg-transparent border text-textPrimary font-[500] mt-5 hover:text-white hover:bg-secondary hover:border-none transition duration-300 ease-in-out flex items-center justify-center;
+}
+
+/* END OF CONTACT CSS */
+
+/*
+This CSS is for: faq
+Folder: /components/home
+File: faq.html
+*/
+
+.faq{
+    @apply flex flex-col lg:flex-row items-center lg:items-start p-6  gap-6 lg:gap-10 px-[7%] mb-24;
+}
+
+.faq-image{
+    @apply w-full h-[500px] object-cover shadow-lg;
+}
+
+.faq-heading{
+    @apply text-4xl font-[500];
+}
+
+.faq-heading-highlight{
+    @apply text-secondary;
+}
+
+.faq-icon{
+    @apply flex text-sm items-center justify-center min-w-6 min-h-6 bg-secondary text-white rounded-full transform transition-transform duration-300 group-hover:bg-white group-hover:text-black;
+}
+
+/* END OF FAQ CSS */
+
+/*
+This CSS is for: contact
+Folder: /components/home
+File: overview.html
+*/
+
+.overview-left-section{
+    @apply lg:w-1/2 w-full flex flex-col md:flex-row justify-between md:justify-start items-center gap-10 md:mb-10 lg:mb-0 lg:py-10 bg-secondary;
+}
+
+.overview-left-content{
+    @apply flex flex-col gap-4 items-center md:items-start  text-center mb-10 md:mb-0 md:text-left;
+}
+
+.overview-right-section{
+    @apply w-full lg:w-1/2 h-[300px] lg:h-[430px] relative overflow-hidden bg-fixed bg-cover flex flex-col md:flex-row;
+}
+
+.overview-right-content{
+    @apply absolute inset-0 flex items-center justify-center text-center text-white px-4;
+}
+
+.overview-paragraph{
+    @apply text-2xl font-semibold w-[93%] lg:w-[80%];
+}
+
+.overview-button{
+    @apply w-52 h-[60px] bg-[black] text-[#fff] font-[500] mt-5 hover:text-black hover:bg-[#fff] transition duration-300 ease-in-out;
+}
+
+
+/* END OF OVERVIEW CSS */
+
+/*
+This CSS is for: blog
+Folder: /components/home
+File: blog.html
+*/
+
+.blog-heading{
+    @apply text-4xl font-semibold text-black;
+}
+
+.blog-grid{
+    @apply grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 mt-10 mb-24;
+}
+
+.blog-card{
+    @apply relative flex flex-col items-center justify-center overflow-hidden pb-1 hover:scale-100;
+}
+
+.blog-card-image{
+    @apply object-cover h-full w-full transition-transform duration-300 group-hover:scale-105;
+}
+
+.blog-card-image-overlay{
+    @apply absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-[10];
+}
+
+.blog-card-icon{
+    @apply w-16 h-16 absolute bg-secondary items-center justify-center flex rounded-full transition-transform duration-300 -translate-y-64 transform group-hover:-translate-y-12 z-[11] cursor-pointer;
+}
+
+.blog-card-content{
+    @apply w-[90%] md:w-[85%] xl:w-[85%] min-h-[140px] bg-[#fff] -mt-16 shadow-lg p-7 text-gray-800 z-20 relative;
+}
+
+/* END OF BLOG CSS */
+
+/*
+This CSS is for: projects
+Folder: /components/about
+File: projects.html
+*/
+
+.project-carousel .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.project-carousel .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 16px;
+    height: 4px;
+    border-radius: 5px;
+    margin: 0 6px;
+}
+
+.project-carousel .swiper-pagination {
+    bottom: 2px;
+}
+
+.project-carousel .swiper-wrapper {
+    height: max-content;
+    width: max-content;
+    padding-bottom: 64px;
+}
+
+/* END OF PROJECTS CSS */
+
+/*
+This CSS is for: services
+Folder: /components/about
+File: services.html
+*/
+
+.service-carousel .swiper-button-prev:after,
+.service-carousel .swiper-rtl .swiper-button-next:after {
+    content: '';
+}
+
+.service-carousel .swiper-button-next:after,
+.service-carousel .swiper-rtl .swiper-button-prev:after {
+    content: '';
+}
+
+.service-carousel .swiper-button-next svg,
+.service-carousel .swiper-button-prev svg {
+    width: 24px;
+    height: 24px;
+}
+
+.service-carousel .swiper-button-next,
+.service-carousel .swiper-button-prev {
+    position: relative;
+}
+
+.services-slider-icon{
+    @apply w-20 h-20 bg-[#fff] absolute rounded-full ml-[10%] mb-5 text-secondary group-hover:text-textPrimary flex items-center justify-center group-hover:bg-secondary;
+}
+
+.service-slider-content{
+    @apply w-full h-1/2 flex items-start p-[7%] flex-col pt-12 justify-center bg-gray-200 border-t-4 group-hover:border-t-4 group-hover:border-secondary transition duration-300 ease-in-out;
+}
+
+
+/* END OF SERVICES CSS */
+
+/*
+This CSS is for: footer
+Folder: /components/about
+File: footer.html
+*/
+
+.footer-email-container{
+    @apply md:w-[80%] w-[95%] p-6 md:p-9 bg-secondary absolute flex-col lg:flex-row flex  items-center justify-between gap-4 lg:gap-4 md:mb-5 lg:mb-0;
+}
+
+.footer-email-text{
+    @apply md:text-3xl sm:text-2xl text-lg font-[500] text-[#fff] w-full lg:w-1/2;
+}
+
+.footer-email-placeholder{
+    @apply w-full pr-16 pl-4 py-4 md:py-6 bg-transparent border border-[#E38B9D] focus:outline-none focus:ring-2 focus:ring-transparent text-[#fff] placeholder:text-[#fff];
+}
+
+.footer-email-button{
+    @apply absolute text-sm  font-[500] md:py-4 top-1/2 right-2 md:right-3 transform -translate-y-1/2 px-3 py-3 text-black bg-[#FFF] hover:bg-black hover:text-[#fff] focus:outline-none transition-colors  duration-300 ease-in-out;
+}
+
+.footer-banner{
+    @apply bg-black min-h-[80px] flex flex-col md:flex-row justify-between items-center px-[7%] gap-5;
+}
+
+
+/* END OF FOOTER CSS */
+
+/*
+This CSS is for: why-choose-us
+Folder: /components/about
+File: why-choose-us.html
+*/
+
+.choose-us-container{
+    @apply w-full flex flex-col lg:flex-row lg:bg-[#1D1E22] lg:h-[90vh] mb-24;
+}
+
+.choose-us-image{
+    @apply lg:w-1/2 w-full h-full  bg-cover bg-center overflow-hidden;
+}
+
+.choose-us-content-container{
+    @apply relative w-full lg:w-1/2 flex flex-col justify-center py-10 lg:py-0 lg:mt-0 bg-[#F2EDEB] px-[7%];
+}
+
+.choose-us-heading{
+    @apply text-4xl font-semibold text-black text-left;
+}
+
+.choose-us-option{
+    @apply flex items-center gap-5  bg-[#212226] hover:bg-[#fff] p-2 transition-colors duration-300 ease-in-out hover:scale-100;
+}
+
+.choose-us-option-icon{
+    @apply w-12 h-12 bg-secondary group-hover:bg-secondary rounded-full flex items-center justify-center;
+}
+
+.choose-us-text{
+    @apply text-lg font-semibold text-left text-[#fff] group-hover:text-black;
+}
+
+/* END OF WHY-CHOOSE-US CSS */
+
+/*
+This CSS is for: contact
+Folder: /components/contact
+File: contact-form.html, contact-info.html,contact-map.html
+*/
+
+.contact-details-icon{
+    @apply text-3xl text-secondary transform transition-transform duration-300 group-hover:translate-y-4;
+}
+
+.contact-form-label{
+    @apply block text-sm font-medium text-gray-700;
+}
+
+.contact-form-placeholder{
+    @apply mt-1 block w-full px-3 py-4 bg-service focus:outline-none;
+}
+
+.contact-form-button{
+    @apply w-56 h-[50px] bg-secondary text-[#fff] font-[500] mt-5 hover:text-[#fff] hover:bg-black transition duration-300 ease-in-out;
+}
+
+/* END OF CONTACT CSS */
+
+/*
+This CSS is for: service-areas
+Folder: /components/service-areas
+File: areas.html
+*/
+
+
+.service-areas{
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 bg-white;
+}
+
+.service-areas-container{
+    @apply relative flex flex-col items-center p-6 py-36 shadow-lg  overflow-hidden bg-cover bg-center transition-transform duration-500 transform group-hover:scale-110 hover:scale-100;
+}
+
+.service-areas-image-overlay{
+    @apply absolute inset-0 bg-black bg-opacity-40 opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex items-center justify-center;
+}
+
+.service-areas-button{
+    @apply flex items-center justify-center py-4 px-2 text-xl font-[500] mt-5 bg-secondary text-[#fff] hover:bg-black transition-colors duration-300 ease-in-out cursor-pointer;
+}
+
+/* END OF SERVICE-AREA CSS */
+
+/*
+This CSS is for: services
+Folder: /components/service
+File: service-description.html
+*/
+
+.heading-service{
+    @apply mb-5 text-3xl font-[500];
+}
+
+.service-description-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s, color 0.3s;
+}
+
+.service-description-icon i  {
+    font-size: 17px;
+    color: black;
+    transition: color 0.3s;
+}
+
+.service-description:hover .service-description-container {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+}
+
+.service-description:hover .service-description-text,
+.service-description:hover .service-description-icon i {
+    @apply text-secondary;
+}
+
+.service-description.active .service-description-container {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+}
+
+.service-description.active .service-description-text,
+.service-description.active .service-description-icon i {
+    @apply text-secondary;
+}
+
+
+.service-feature{
+    @apply flex items-center rounded-lg gap-5  flex-1 hover:scale-100;
+}
+
+.service-feature-content{
+    @apply min-w-16 min-h-16 bg-bgSecondary rounded-full flex items-center justify-center group-hover:bg-secondary transition-colors duration-300 ease-in-out;
+}
+
+/* END OF SERVICE CSS */
+
+/*
+This CSS is for: service-area
+Folder: /components/service-area
+File: service-area-description.html
+*/
+
+.service-area-button{
+    @apply w-64 h-[60px] bg-secondary text-[#fff] font-[500] mt-10 hover:text-[#fff] hover:bg-black transition duration-300 ease-in-out flex items-center justify-center;
+}
+
+.service-area-contact-button{
+    @apply w-full h-[40px] bg-secondary text-[#fff] font-[500] mt-5 hover:text-[#fff] hover:bg-black transition duration-300 ease-in-out flex items-center justify-center;
+}
+
+/* END OF SERVICE-AREA CSS */
+
+/*
+This CSS is for: blog
+Folder: /components/blog
+File: blog-layout.html
+*/
+
+.blog-header{
+    @apply flex mt-4 w-full gap-5 flex-wrap justify-start items-center ;
+}
+
+.blog-header-item{
+    @apply flex items-center rounded-lg gap-2;
+}
+
+.blog-header-text{
+    @apply text-sm text-left w-full text-[#727272];
+}
+
+.blog-content{
+    @apply text-[#727272] mt-5;
+}
+
+.blog-search-button{
+    @apply px-5 py-4 bg-secondary text-white font-semibold hover:bg-black transition-colors duration-200;
+}
+
+.blog-content p {
+    font-size: 18px;
+    line-height: 1.2;
+    color:#727272;
+    
+}
+  
+.blog-content h1 {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #DD0733;
+    font-size: 2.5rem;
+}
+
+.blog-content h2 {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #DD0733;
+    font-size: 2rem; 
+}
+
+.blog-content h3 {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #DD0733;
+    font-size: 1.75rem; 
+}
+  
+.blog-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+  
+.blog-content a {
+    color: #DD0733;
+    text-decoration: underline;
+}
+
+.blog-content img{
+    @apply mt-5 w-full h-auto overflow-hidden;
+}
+
+.blog-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+  
+.blog-content th,
+.blog-content td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+  
+.blog-content th {
+    background-color: #DD0733;
+    color: white;
+}
+
+/* END OF BLOG CSS */
+
+/*
+This CSS is for: terms-and-conditions, privacy-policy
+Folder: /components/terms-and-conditions, /components/privacy-policy
+File: terms-and-conditions.html, privacy-policy.html
+*/
+
+
+.legal-content p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: black;
+}
+
+.legal-content h1 {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #DD0733;
+    font-size: 1.5rem;
+}
+
+.legal-content h2 {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #DD0733;
+    font-size: 1rem;
+}
+
+.legal-content h3 {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #DD0733;
+    font-size: 1.75rem;
+}
+
+.legal-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.legal-content a {
+    color: #DD0733;
+    text-decoration: underline;
+}
+
+.legal-content img {
+    @apply mt-5 w-full h-auto overflow-hidden;
+}
+
+.legal-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.legal-content th,
+.legal-content td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.legal-content th {
+    background-color: #DD0733;
+    color: white;
+}
+
+/* END OF TERMS-AND-CONDITIONS CSS */
+
+/* END OF CSS */

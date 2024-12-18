@@ -1,0 +1,19 @@
+{
+    "serviceAreas": [
+        {
+            "serviceAreaLink": "/service-areas/downtown",
+            "serviceAreaText": "Downtown, Columbus, Ohio",
+            "serviceAreaImage": "/resources/assets/images/area1.jpg"
+        },
+        {
+            "serviceAreaLink": "/service-areas/clintonville",
+            "serviceAreaText": "Clintonville, Columbus, Ohio",
+            "serviceAreaImage": "/resources/assets/images/area2.jpg"
+        },
+        {
+            "serviceAreaLink": "/service-areas/dublin",
+            "serviceAreaText": "Dublin, Columbus, Ohio",
+            "serviceAreaImage": "/resources/assets/images/area3.jpg"
+        }
+    ]
+}

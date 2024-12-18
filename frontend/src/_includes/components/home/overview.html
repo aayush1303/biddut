@@ -1,0 +1,30 @@
+<section class="relative">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-6 md:gap-0">
+        <!-- Left Section with Image -->
+        <div
+            class="overview-left-section">
+            <img src="{{overviewImageLeft}}" alt="FAQ Background"
+                class="md:w-1/2 w-full h-[350px] object-cover " />
+            <div class="overview-left-content">
+                <p class="text-white text-3xl font-[500] w-[93%] lg:w-[85%]">
+                  {{overviewHeading}}
+                </p>
+                <button
+                    class="overview-button">
+                    {{overviewButton}}
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Section with Parallax Background -->
+        <div class="overview-right-section"
+            style="background-image: url('{{overviewImageRight}}');">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="overview-right-content">
+                <p class="overview-paragraph">
+                    {{overviewParagraph}}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

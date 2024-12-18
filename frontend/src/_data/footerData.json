@@ -1,0 +1,37 @@
+{
+    "footerDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ab voluptatem quo sunt illum corporis, omnis veniam tenetur quae dicta asperiores alias inventore.",
+
+    "footerImage1": "/resources/assets/images/footerImage1.jpg",
+    "footerImage2": "/resources/assets/images/footerImage2.jpg",
+    "footerImage3": "/resources/assets/images/footerImage3.jpg",
+    "footerImage4": "/resources/assets/images/footerImage4.jpg",
+    "footerImage5": "/resources/assets/images/footerImage5.jpg",
+    "footerImage6": "/resources/assets/images/footerImage6.jpg",
+    
+    "footerLinks": [
+        {
+            "footerLink": "/",
+            "footerText": "Home"
+        },
+        {
+            "footerLink": "/about",
+            "footerText": "About"
+        },
+        {
+            "footerLink": "/service-areas",
+            "footerText": "Service Areas"
+        },
+        {
+            "footerLink": "/gallery",
+            "footerText": "Gallery"
+        },
+        {
+            "footerLink": "/blogs",
+            "footerText": "Blogs"
+        },
+        {
+            "footerLink": "/contact",
+            "footerText": "Contact"
+        }
+    ]
+}

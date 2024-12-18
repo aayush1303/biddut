@@ -1,0 +1,25 @@
+{
+    "testimonials": [
+        {
+            "name": "Jane D",
+            "role": "CEO",
+            "image": "https://pagedone.io/asset/uploads/1696229969.png",
+            "rating": 5,
+            "feedback": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vitae impedit assumenda tenetur cum, maiores quaerat ut inventore eveniet dolorum repudiandae."
+        },
+        {
+            "name": "Harsh P.",
+            "role": "Product Designer",
+            "image": "https://pagedone.io/asset/uploads/1696229994.png",
+            "rating": 4,
+            "feedback": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor quisquam doloribus sunt debitis voluptatibus aliquam dolorum fugiat delectus odit deleniti et consequuntur blanditiis magni perspiciatis quos commodi."
+        },
+        {
+            "name": "John S.",
+            "role": "Software Engineer",
+            "image": "https://pagedone.io/asset/uploads/1696229969.png",
+            "rating": 5,
+            "feedback": "Lorem ipsum dolor sit amet consectetur repellendus? Nostrum voluptas ipsam velit ex."
+        }
+    ]
+}

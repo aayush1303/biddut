@@ -1,0 +1,65 @@
+<section class="p-[7%] testimonial-carousel bg-bgSecondary">
+    <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+        <div
+            class="flex justify-center items-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8 max-w-sm sm:max-w-2xl lg:max-w-full mx-auto">
+            <div class="w-full lg:w-2/5">
+                <h2 class="testimonial-heading">{{testimonialHeading}}<span
+                        class="testimonial-heading-highlight">{{testimonialHighlight}}</span>
+                </h2>
+                <!-- Slider controls -->
+                <div class="flex items-center justify-center lg:justify-start gap-10">
+                    <button id="slider-button-left"
+                        class="swiper-button-prev group testimonials-button w-12 h-12"
+                        data-carousel-prev>
+                        <svg class="h-6 w-6 text-black group-hover:text-white" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+                    <button id="slider-button-right"
+                        class="swiper-button-next group testimonials-button w-12 h-12"
+                        data-carousel-next>
+                        <svg class="h-6 w-6 text-black group-hover:text-white" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3 12L19 12M14 18L19.2929 12.7071C19.6262 12.3738 19.7929 12.2071 19.7929 12C19.7929 11.7929 19.6262 11.6262 19.2929 11.2929L14 6"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+            <div class="w-full lg:w-3/5">
+                <!--Slider wrapper-->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        {% for testimonial in testimonials.testimonials %}
+                        <div class="swiper-slide group shadow-lg bg-white max-sm:max-w-sm max-sm:mx-auto p-6 transition-all duration-500">
+                            <div class="flex items-center gap-5 mb-5 sm:mb-5">
+                                <img class="rounded-full object-cover" src="{{ testimonial.image }}" alt="{{ testimonial.name }}">
+                                <div class="grid gap-1">
+                                    <h5 class="text-gray-900 font-medium transition-all duration-500">{{ testimonial.name }}</h5>
+                                    <span class="text-sm leading-6 text-gray-500">{{ testimonial.role }}</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center mb-5 sm:mb-5 gap-2 text-amber-500 transition-all duration-500">
+                                {% for star in range(5) %}
+                                <i class="fa-solid fa-star {% if star < testimonial.rating %} text-amber-500 {% else %} text-gray-300 {% endif %}"></i>
+                                {% endfor %}
+                            </div>
+                            <p class="text-sm text-gray-500 leading-6 transition-all duration-500 min-h-24 group-hover:text-gray-800">
+                                {{ testimonial.feedback }}
+                            </p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

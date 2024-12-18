@@ -1,0 +1,46 @@
+{
+    "subServices": [
+        {
+            "icon": "fa-gauge-high",
+            "title": "Electrical Panel Upgrades",
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis ab voluptatem quo sunt illum corporis, omnis veniam tenetur quae dicta asperiores alias inventore.",
+            "link": "/services/electrical-panel-upgrades",
+            "bgImage": "/resources/assets/images/service.jpg"
+        },
+        {
+            "icon": "fa-plug",
+            "title": "Wiring and Rewiring Service",
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed tempora numquam saepe dolorem fugit dicta asperiores alias inventore.",
+            "link": "/services/wiring-rewiring",
+            "bgImage": "/resources/assets/images/service.jpg"
+        },
+        {
+            "icon": "fa-lightbulb",
+            "title": "Lighting and Repairs",
+            "description": "Lorem ipsum, dolor sit amet consectetr",
+            "link": "/services/lighting-and-repairs",
+            "bgImage": "/resources/assets/images/service.jpg"
+        },
+        {
+            "icon": "fa-user-shield",
+            "title": "Electrical Safety Inspections",
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis ab voluptatem quo sunt illum corporis, omnis veniam.",
+            "link": "/services/electrical-safety-inspections",
+            "bgImage": "/resources/assets/images/service.jpg"
+        },
+        {
+            "icon": "fa-bolt",
+            "title": "Surge Protection",
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit dicta asperiores alias inventore. Perferendis ab voluptatem quo sunt illum corporis, omnis veniam tenetur quae.",
+            "link": "/services/surge-protection",
+            "bgImage": "/resources/assets/images/service.jpg"
+        },
+        {
+            "icon": "fa-screwdriver-wrench",
+            "title": "Troubleshooting and Repair",
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis.",
+            "link": "/services/troubleshooting-repairs",
+            "bgImage": "/resources/assets/images/service.jpg"
+        }
+    ]
+}

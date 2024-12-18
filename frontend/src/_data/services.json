@@ -1,0 +1,28 @@
+{
+    "services": [
+        {
+            "serviceText": "Electrical Panel Upgrades",
+            "serviceLink": "/services/electrical-panel-upgrades"
+        },
+        {
+            "serviceText": "Wiring and Rewiring Services",
+            "serviceLink": "/services/wiring-rewiring"
+        },
+        {
+            "serviceText": "Lighting and Repairs",
+            "serviceLink": "/services/lighting-and-repairs"
+        },
+        {
+            "serviceText": "Electrical Safety Inspections",
+            "serviceLink": "/services/electrical-safety-inspections"
+        },
+        {
+            "serviceText": "Surge Protection",
+            "serviceLink": "/services/surge-protection"
+        },
+        {
+            "serviceText": "Troubleshooting and Repairs",
+            "serviceLink": "/services/troubleshooting-repairs"
+        }
+    ]
+}

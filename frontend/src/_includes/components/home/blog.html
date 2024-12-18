@@ -1,0 +1,36 @@
+<section class="relative">
+    <div class="bg-[#fff] px-[7%] flex flex-col text-center z-1">
+        <h2 class="blog-heading mt-24">{{blogHeading}}</h2>
+        <h2 class="text-4xl font-semibold text-black">{{blogSubHeading}}</h2>
+        <div class="blog-grid">
+
+            {% for post in blogPosts %}
+            <div class="blog-card group">
+                <div class="relative h-[310px] w-full cursor-pointer overflow-hidden">
+                    <img src="{{ post.data.postImage }}" alt="" class="blog-card-image">
+                    <div class="blog-card-image-overlay"></div>
+                </div>
+                <div class="blog-card-icon">
+                    <a href="{{ post.url }}">
+                        <i class="fa-solid fa-arrow-right-long text-white text-2xl"></i>
+                    </a>
+                </div>
+                <div class="blog-card-content">
+                    <div class="flex items-center justify-center gap-10 mb-2 text-[15px]">
+                        <p class="flex items-center gap-2">
+                            <i class="fa-regular fa-circle-user text-secondary"></i>
+                            <span class="text-textTertiary">{{ post.data.postAuthor }}</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fa-regular fa-note-sticky text-secondary"></i>
+                            <span class="text-textTertiary">{{ post.data.postCategory }}</span>
+                        </p>
+                    </div>
+                    <p class="font-semibold text-lg text-black mt-4">{{ post.data.postTitle }}</p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>

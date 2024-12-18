@@ -1,0 +1,36 @@
+<section class="relative">
+    <div class="abt-container">
+        <!-- First div (image and small circle) -->
+        <div class="abt-container-left-section">
+            <img src="{{abtUsImage1}}" alt=""
+                class="abt-container-first-image">
+            <img src="{{abtUsImage2}}" alt=""
+                class="abt-container-second-image">
+        </div>
+
+        <!-- Second div (content and button) -->
+        <div class="abt-container-right-section">
+            <h2 class="abt-container-heading">{{aboutUsHeading}}</h2>
+            <p class="mt-5">{{aboutUs}}</p>
+            <div class="w-full flex flex-col flex-wrap-nowrap gap-4">
+                <div class="abt-container-content sm:flex-wrap-nowrap">
+                    {% for feature in features %}
+                      <div class="flex items-center rounded-lg gap-5 group flex-1 hover:scale-100">
+                        <div class="abt-container-icon-container">
+                          <span class="text-4xl group-hover:text-white text-secondary">
+                            <i class="fa-solid {{ feature.icon }}"></i>
+                          </span>
+                        </div>
+                        <p class="text-lg font-semibold text-left">{{ feature.title }}</p>
+                      </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="border w-full mt-5"></div>
+            <a href="{{referenceLink}}"
+                class="abt-container-button">
+                {{referenceText}}
+            </a>
+        </div>
+    </div>
+</section>

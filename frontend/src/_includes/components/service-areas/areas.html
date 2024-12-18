@@ -1,0 +1,18 @@
+<section class="relative px-[7%] mt-24 mb-24">
+    <div class="service-areas">
+        <!-- Visit Our Place Card -->
+        {% for area in serviceAreas.serviceAreas %}
+        <div>
+            <div class="service-areas-container group"
+                style="background-image: url('{{ area.serviceAreaImage }}');">
+                <div class="service-areas-image-overlay">
+                    <p class="text-white text-2xl font-semibold text-center">{{ area.serviceAreaText }}</p>
+                </div>
+            </div>
+            <a href="{{ area.serviceAreaLink }}" class="service-areas-button">
+                {{ area.serviceAreaText }}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>

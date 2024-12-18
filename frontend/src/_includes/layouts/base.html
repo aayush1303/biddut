@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "components/shared/basehead.html" %}
+</head>
+
+<body>
+    <!-- Header Section -->
+    {% include "components/shared/nav.html" %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer Section -->
+    {% block footer %}
+    {% include "components/shared/footer.html" %}
+    {% endblock %}
+
+
+    <script src="/resources/scripts/app.js"></script>
+</body>
+
+</html>

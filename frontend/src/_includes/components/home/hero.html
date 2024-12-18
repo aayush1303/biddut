@@ -1,0 +1,47 @@
+<section class="relative">
+    <div id="hero" class="w-full relative z-1">
+        <div class="swiper default-carousel swiper-container ">
+            <div class="swiper-wrapper ">
+                {% for hero in heroes %}
+                <div class="swiper-slide"
+                    style="background-image: url('{{ hero.heroImage }}'); background-size: cover; background-position: center;">
+                    <div class="relative h-full">
+                        <div class="hero-overlay"></div> <!-- Overlay -->
+                        <div class="hero-container">
+                            <!-- Text container -->
+                            <h1 class="hero-heading">{{ hero.heroHeading }}</h1>
+                            <a href="{{ hero.buttonLink }}" class="hero-button">
+                                {{ hero.buttonText }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="hero-slider-controller">
+            <!-- Slider controls -->
+            <div class="flex items-center gap-[19px]">
+                <button id="slider-button-left"
+                    class="swiper-button-prev group flex justify-center items-center  w-16 h-9 transition-all duration-500 hover:scale-100">
+                    <svg class="h-6 w-6 " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button id="slider-button-right"
+                    class="swiper-button-next group flex justify-center items-center  w-16 h-9 transition-all duration-500 hover:scale-100">
+                    <svg class="h-6 w-6 " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3 12L19 12M14 18L19.2929 12.7071C19.6262 12.3738 19.7929 12.2071 19.7929 12C19.7929 11.7929 19.6262 11.6262 19.2929 11.2929L14 6"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="hidden xl:flex">
+            <div class="swiper-pagination mb-[40vh]"></div>
+        </div>
+    </div>
+</section>

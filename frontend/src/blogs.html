@@ -1,0 +1,13 @@
+---
+layout: layouts/blogs.html
+title: Blog page
+pagination:
+  data: collections.blogPosts
+  size: 3 # Number of items per page
+  alias: blogPosts
+permalink: "/blogs/{% if pagination.pageNumber == 0 %}{% else %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+
+bannerImage: /resources/assets/images/serviceHero.jpg
+bannerTitle: Blogs
+bannerNav: Blogs
+---

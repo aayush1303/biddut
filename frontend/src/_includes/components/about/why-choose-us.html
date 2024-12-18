@@ -1,0 +1,26 @@
+<section class="relative">
+    <div class="choose-us-container">
+        <div class="choose-us-image">
+            <img src="{{whychooseusImage}}" alt="" class="h-full w-full object-cover">
+        </div>
+        <div class="choose-us-content-container">
+            <h2 class="choose-us-heading">{{whyChooseUsHeading}}</h2>
+            <p class="mt-5 text-black">{{whyChooseUsParagraph}}</p>
+            <div class="w-full grid gap-4">
+                <!-- Grid Container -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
+                    {% for option in options %}
+                    <div class="choose-us-option group">
+                      <div class="choose-us-option-icon">
+                        <span class="text-2xl text-white">
+                          <i class="{{ option.icon }}"></i>
+                        </span>
+                      </div>
+                      <p class="choose-us-text">{{ option.title }}</p>
+                    </div>
+                  {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

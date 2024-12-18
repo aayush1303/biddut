@@ -1,0 +1,40 @@
+{
+    "projects": [
+        {
+            "title": "Repair",
+            "image": "/resources/assets/images/blog2.jpg",
+            "description": "Inspections & Testing",
+            "link": "/about"
+        },
+        {
+            "title": "Repair",
+            "image": "/resources/assets/images/blog.jpg",
+            "description": "Inspections & Wiring",
+            "link": "/about"
+        },
+        {
+            "title": "Repair",
+            "image": "/resources/assets/images/contact.jpg",
+            "description": "Data System Wiring",
+            "link": "/about"
+        },
+        {
+            "title": "Repair",
+            "image": "/resources/assets/images/blog4.jpg",
+            "description": "Industrial Solutions",
+            "link": "/about"
+        },
+        {
+            "title": "Repair",
+            "image": "/resources/assets/images/hero3.png",
+            "description": "Renovation Wiring",
+            "link": "/about"
+        },
+        {
+            "title": "Repair",
+            "image": "/resources/assets/images/blog.jpg",
+            "description": "Data System Wiring",
+            "link": "/about"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "faqs": [
+        {
+            "question": "What services do you offer?",
+            "answer": "We offer a range of electrical services, including residential, commercial, and industrial solutions tailored to your needs."
+        },
+        {
+            "question": "Are your electricians licensed and insured?",
+            "answer": "Yes, all our electricians are fully licensed, insured, and have years of experience in the field."
+        },
+        {
+            "question": "How can I schedule an appointment?",
+            "answer": "You can schedule an appointment by contacting us via phone, email, or through our website's contact form."
+        },
+        {
+            "question": "Do you offer emergency services?",
+            "answer": "Yes, we offer 24/7 emergency services to address any urgent electrical issues."
+        },
+        {
+            "question": "What areas do you serve?",
+            "answer": "We serve multiple locations, including Downtown, Clintonville, and Dublin in Columbus, Ohio."
+        }
+    ]
+}

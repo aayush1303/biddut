@@ -1,0 +1,137 @@
+<footer class="relative">
+    <div class="relative flex items-center justify-center w-full ">
+        <div class="footer-email-container">
+            <p class="footer-email-text">{{footerEmailText}}</p>
+            <div class="w-full lg:w-1/2 relative">
+                <input 
+                  type="text" 
+                  placeholder="Email address" 
+                  class="footer-email-placeholder"
+                />
+                <button 
+                  class="footer-email-button md:text-md"
+                >
+                  {{footerEmailButtonText}}
+                </button>
+              </div>
+        </div>
+    </div>
+    <div class="bg-[#16171A] text-[#EEEEEE] py-16 px-[7%]">
+        <div class="footer-container">
+            <!-- First Column (Logo and Description) -->
+            <div class="space-y-4">
+                <img src="{{businessInfo.businessLogo}}" alt="Logo"
+                    class="w-42">
+                <p class="mb-4">
+                    {{footerData.footerDescription}}
+                </p>
+
+                <!-- Social Media Links -->
+                <div class="flex gap-2 flex-col items-start">
+                    <div
+                        class="footer-contact-text">
+                        <span class="text-secondary"><i class="fa-solid fa-location-dot"></i>
+                        </span>{{businessInfo.businessLocation}}
+
+                    </div>
+                    <div
+                        class="footer-contact-text">
+                        <span class="text-secondary"><i
+                                class="fa-solid fa-envelope"></i>
+                        </span>{{businessInfo.businessEmail}}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Column (Services) -->
+            <div class="space-y-1">
+                <p class="text-lg font-bold">Services</p>
+                <ul class="space-y-2 text-textTertiary">
+                    {% for service in services.services %}
+                    <li class="group hover:scale-100">
+                      <a href="{{ service.serviceLink }}"
+                         class="cursor-pointer hover:text-[#fff] transition duration-300">
+                         <i class="fa-solid fa-plus footer-service-icon hidden group-hover:inline-block"></i>{{ service.serviceText }}
+                      </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+
+            <!-- Third Column (Quick Links) -->
+            <div class="space-y-2">
+                <p class="text-lg font-bold">Quick Links</p>
+                <ul class="space-y-2 text-textTertiary">
+                    {% for link in footerData.footerLinks %}
+                    <li class="group hover:scale-100">
+                      <a href="{{ link.footerLink }}"
+                         class="cursor-pointer hover:text-[#fff] transition duration-300">
+                         <i class="fa-solid fa-plus footer-service-icon hidden group-hover:inline-block"></i>{{ link.footerText }}
+                      </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- New Fourth Column -->
+            <div class="space-y-4 xl:ml-[20px]">
+                <p class="text-lg font-bold">Gallery</p>
+                <div class="flex items-center gap-4">
+                    <!-- Image 1 -->
+                    <div class="footer-gallery-image">
+                        <img src="{{footerData.footerImage1}}"
+                            alt="Gallery Image 1" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="footer-gallery-image ">
+                        <img src="{{footerData.footerImage2}}"
+                            alt="Gallery Image 2" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="footer-gallery-image ">
+                        <img src="{{footerData.footerImage3}}"
+                            alt="Gallery Image 3" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <!-- Image 4 -->
+                    <div class="footer-gallery-image">
+                        <img src="{{footerData.footerImage4}}"
+                            alt="Gallery Image 4" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Image 5 -->
+                    <div class="footer-gallery-image">
+                        <img src="{{footerData.footerImage5}}"
+                            alt="Gallery Image 5" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Image 6 -->
+                    <div class="footer-gallery-image">
+                        <img src="{{footerData.footerImage6}}"
+                            alt="Gallery Image 6" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-banner">
+        <p class="text-center text-textSecondary py-4 md:py-0">{{businessInfo.businessCopyRight}}
+            by <a href="#" class="text-[#fff] hover:underline">{{businessInfo.businessName}}</a>
+            <a href="/terms-and-conditions" class="text-[14px] pr-1 hover:underline cursor-pointer whitespace-nowrap">
+                <strong>Terms & conditions</strong>
+            </a>
+            |
+            <a href="/privacy-policy"
+                class="text-[14px] pl-1 hover:underline cursor-pointer whitespace-nowrap">
+                <strong>Privacy Policy</strong>
+            </a>
+        </p>
+        <div class="flex space-x-4 mb-5 md:mb-0">
+        {% for social in socialIcons %}
+            <a href="{{ social.link }}" class="footer-social-icon">
+                <i class="{{ social.icon }} text-white"></i>
+            </a>
+        {% endfor %}
+        </div>
+    </div>
+</footer>

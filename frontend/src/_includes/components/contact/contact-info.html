@@ -1,0 +1,16 @@
+<section class="relative px-[10%] mt-24">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 bg-white">
+        {% for detail in businessDetails %}
+        <div class="flex flex-col items-center p-6 py-8 bg-[#fff] shadow-lg group hover:scale-100">
+            <div class="flex items-start justify-center w-20 h-20 bg-[#F5F5F8] rounded-full mb-6">
+                <i class="fa-solid {{ detail.icon }} contact-details-icon"></i>
+            </div>
+            <div class="mt-auto mb-10"></div>
+            <h3 class="text-xl font-[500] mb-2">{{ detail.title }}</h3>
+            <p class="text-gray-500 text-center">
+                {{ detail.description }}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+ </section>
